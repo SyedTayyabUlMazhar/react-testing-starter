@@ -6,7 +6,7 @@ const UserAccount = ({ user }: { user: User }) => {
       <h2>User Profile</h2>
       {user.isAdmin && <button>Edit</button>}
       <div>
-        <strong>Name:</strong> {user.name}
+        <strong>Name: {user.name}</strong> 
       </div>
     </>
   );
