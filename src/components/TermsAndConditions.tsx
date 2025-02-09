@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-const TermsAndConditions = () => {
+type TermsAndConditionsProps = {
+  onSubmitPress?: () => void;
+};
+const TermsAndConditions = (props: TermsAndConditionsProps) => {
+  const { onSubmitPress } = props;
+
   const [isChecked, setIsChecked] = useState(false);
 
   return (
@@ -22,7 +27,7 @@ const TermsAndConditions = () => {
           I accept the terms and conditions.
         </label>
       </div>
-      <button disabled={!isChecked} className="btn">
+      <button disabled={!isChecked} className="btn" onClick={onSubmitPress}>
         Submit
       </button>
     </div>
